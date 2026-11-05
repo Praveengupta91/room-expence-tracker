@@ -22,6 +22,11 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
+    - name: Create mock google-services.json
+      run: |
+        mkdir -p app/
+        echo '{"project_info":{"project_number":"0","project_id":"dummy"},"client":[{"client_info":{"mobilesdk_app_id":"1:0:android:0","android_client_info":{"package_name":"com.example.roomexpencetracker"}},"api_key":[{"current_key":"dummy"}]}]}' > app/google-services.json
+
     - name: Build Debug APK with Gradle
       run: gradle assembleDebug --stacktrace
 
