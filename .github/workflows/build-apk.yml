@@ -25,7 +25,7 @@ jobs:
     - name: Create mock google-services.json
       run: |
         mkdir -p app/
-        echo '{"project_info":{"project_number":"0","project_id":"dummy"},"client":[{"client_info":{"mobilesdk_app_id":"1:0:android:0","android_client_info":{"package_name":"com.example.roomexpencetracker"}},"api_key":[{"current_key":"dummy"}]}]}' > app/google-services.json
+        echo '{"project_info":{"project_number":"123456789","project_id":"roomiesplit-kpst"},"client":[{"client_info":{"mobilesdk_app_id":"1:123456789:android:dummy","android_client_info":{"package_name":"com.aistudio.roomiesplit.kpst"}},"api_key":[{"current_key":"dummy"}]}]}' > app/google-services.json
 
     - name: Build Debug APK with Gradle
       run: gradle assembleDebug --stacktrace
